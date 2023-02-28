@@ -9,6 +9,15 @@ body {
   flex-wrap: nowrap;
 }
 
+.movie-app > .row::-webkit-scrollbar {
+	width: 7px;
+}
+
+.movie-app > .row::-webkit-scrollbar-thumb {
+	background: #ff9d00;
+	border-radius: 15px;
+}
+
 .image-container {
   position: relative;
   width: 300px;
