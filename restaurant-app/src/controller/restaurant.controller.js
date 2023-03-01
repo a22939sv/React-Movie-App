@@ -17,7 +17,7 @@ const restaurantController = {
     },
     getById: async (req, res) => {
         try {
-            const [id] = req.params
+            const { id } = req.params
             const sql = "select * from restaurant where id = ?"
             const [rows, fields] = await pool.query(sql, [id])
             res.json({

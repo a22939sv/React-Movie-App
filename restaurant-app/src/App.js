@@ -4,18 +4,13 @@ import './App.css';
 import RestaurantList from "./components/RestaurantList";
 
 const App = () => {
-  const [restaurants, setRestaurants] = useState([]);
+  const [restaurants, setRestaurants] = useState([{}]);
 
   const getRestaurantsRequest = async () => {
-    const url = `http://localhost:5000/api/v1/restaurant`;
+    const url = `/api/v1/restaurant`;
 
-    const response = await fetch(url, {
-      'mode': 'no-cors',
-      'headers': {
-          'Access-Control-Allow-Origin': '*',
-      }
-    });
-    
+    const response = await fetch(url);
+
     const responseJson = await response.json();
 
     if (responseJson.data) {
@@ -32,7 +27,7 @@ const App = () => {
       <div className="row">
         <h1 className="m-3">Establecimientos que te pueden gustar</h1>
       </div>
-      <div className="row">
+      <div className="row mt-3 restaurants-list">
         <RestaurantList restaurants={restaurants} />
       </div>
     </div>

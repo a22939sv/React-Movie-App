@@ -1,0 +1,40 @@
+.body {
+    margin: 0;
+}
+
+/* .restaurants-list {
+    overflow-y: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.restaurants-list::-webkit-scrollbar {
+	width: 7px;
+}
+
+.restaurants-list::-webkit-scrollbar-thumb {
+	background: #ffb237;
+	border-radius: 15px;
+} */
+
+.restaurant-list {
+    flex-direction: column;
+    transition: transform 1s;
+}
+
+.restaurant-list:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.restaurant-list > .img-restaurant-list {
+    border-radius: 15px;
+}
+
+.restaurant-list > .name-restaurant-list {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.restaurant-list > .score-restaurant-list {
+    flex-direction: row;
+}
