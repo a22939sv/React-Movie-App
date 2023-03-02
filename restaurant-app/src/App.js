@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import RestaurantList from "./components/RestaurantList";
+import RestaurantListHeading from "./components/RestaurantListHeading";
 
 const App = () => {
   const [restaurants, setRestaurants] = useState([{}]);
@@ -23,11 +24,11 @@ const App = () => {
   }, []);
 
   return(
-    <div className="container-fluid">
+    <div className="container-fluid restaurant-app">
       <div className="row">
-        <h1 className="m-3">Establecimientos que te pueden gustar</h1>
+        <RestaurantListHeading heading="Establecimientos que te pueden gustar" />
       </div>
-      <div className="row mt-3 restaurants-list">
+      <div className="row d-flex align-items-center mt-4 mb-4 restaurants-list">
         <RestaurantList restaurants={restaurants} />
       </div>
     </div>

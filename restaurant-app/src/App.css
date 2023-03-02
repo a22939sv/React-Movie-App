@@ -1,34 +1,37 @@
-.body {
+body {
     margin: 0;
 }
 
-/* .restaurants-list {
-    overflow-y: auto;
+.restaurant-app > .restaurants-list {
+    overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
 }
 
-.restaurants-list::-webkit-scrollbar {
-	width: 7px;
+.restaurant-app > .restaurants-list::-webkit-scrollbar {
+    width: 7px;
 }
 
-.restaurants-list::-webkit-scrollbar-thumb {
-	background: #ffb237;
-	border-radius: 15px;
-} */
+.restaurant-app > .restaurants-list::-webkit-scrollbar-thumb {
+    background: #ff9d00;
+    border-radius: 15px;
+}
 
 .restaurant-list {
     flex-direction: column;
-    transition: transform 1s;
-}
-
-.restaurant-list:hover {
-    cursor: pointer;
-    transform: scale(1.1);
 }
 
 .restaurant-list > .img-restaurant-list {
     border-radius: 15px;
+    position: relative;
+    width: 250px;
+    height: 150px;
+    transition: transform 1s;
+}
+
+.restaurant-list > .img-restaurant-list:hover {
+    cursor: pointer;
+    transform: scale(0.97);
 }
 
 .restaurant-list > .name-restaurant-list {
@@ -36,5 +39,5 @@
 }
 
 .restaurant-list > .score-restaurant-list {
-    flex-direction: row;
+    color: #ffb237;
 }
