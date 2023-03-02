@@ -20,11 +20,6 @@ const App = () => {
     }
   }
 
-  useEffect(() => {
-    getRestaurantsRequest();
-    getRestaurantsScoreRequest();
-  }, []);
-
   const getRestaurantsScoreRequest = async () => {
     const url = `/api/v1/restaurant/score`;
 
@@ -36,6 +31,11 @@ const App = () => {
       setRestaurantsScore(responseJson.data);
     }
   }
+
+  useEffect(() => {
+    getRestaurantsRequest();
+    getRestaurantsScoreRequest();
+  }, []);
 
   return(
     <div className="container-fluid restaurant-app">

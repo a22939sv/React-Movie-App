@@ -6,9 +6,9 @@ require('dotenv').config()
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
-const restaurantRouter = require('./routes/restaurant.router')
+const router = require('./routes/router')
 
-app.use("/api/v1/restaurant", restaurantRouter)
+app.use("/api/v1", router)
 
 const PORT = process.env.PORT || 5000
 
