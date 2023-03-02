@@ -29,6 +29,20 @@ const restaurantController = {
                 status: error
             })
         }
+    },
+    getAllScore: async (req, res) => {
+        try {
+            const sql = "select * from restaurant order by score"
+            const [rows, fields] = await pool.query(sql)
+            res.json({
+                data: rows
+            })
+        } catch (error) {
+            console.log(error)
+            res.json({
+                status: error
+            })
+        }
     }
 
 }
