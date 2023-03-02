@@ -2,6 +2,44 @@ body {
     margin: 0;
 }
 
+.header {
+    background-color: #FFC244;
+}
+
+.logo {
+    cursor: pointer;
+    transition: transform 1.5s;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.searchInput {
+    height: 44px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 24px;
+    position: relative;
+    width: 100%;
+    padding-left: 24px;
+}
+
+.startInput {
+    height: 44px;
+    background-color: #00a082;
+    color: white;
+    border-radius: 24px 0;
+    border: none;
+    position: relative;
+    width: 150px;
+    font-weight: bold;
+}
+
+.startInput:hover {
+    background-color: #00846b;
+}
+
 .restaurant-app > .restaurants-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -24,8 +62,8 @@ body {
 .restaurant-list > .img-restaurant-list {
     border-radius: 15px;
     position: relative;
-    width: 350px;
-    height: 200px;
+    width: 300px;
+    height: 170px;
     transition: transform 1s;
 }
 
