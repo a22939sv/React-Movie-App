@@ -33,7 +33,7 @@ CREATE TABLE `restaurant` (
   `id` int(11) NOT NULL,
   `name` varchar(75) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `category` varchar(75) COLLATE utf8_spanish2_ci DEFAULT NULL,
-  `score` int(3) DEFAULT NULL,
+  `star` int(1) DEFAULT NULL,
   `img` text COLLATE utf8_spanish2_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
@@ -41,14 +41,15 @@ CREATE TABLE `restaurant` (
 -- Volcado de datos para la tabla `restaurant`
 --
 
-INSERT INTO `restaurant` (`id`, `name`, `category`, `score`, `img`) VALUES
-(1, 'McDonald\'s', 'Americana', 85, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/x5curfadsolebipl5iyh'),
-(2, 'Dia', 'Supermercado', 100, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/ly8eyexldlgqntcb0uyt'),
-(3, 'Burger King', 'Americana', 89, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/ie0obr3ckjemazfybypz'),
-(4, 'Telepizza', 'Pizza', 94, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/redheyfvhbgvedsdbmkb'),
-(5, 'Starbucks', 'Desayuno', 91, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rol78tegsyjdf3yjcjma'),
-(6, 'Dunkin', 'Desayuno', 96, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/wap0jg2pkxnl5v0nj75b'),
-(7, 'King Doner Kebab', 'Árabe', 88, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/cqpw59aux0wmftouz1dc');
+INSERT INTO `restaurant` (`id`, `name`, `category`, `star`, `img`) VALUES
+(1, 'McDonald\'s', 'Americana', 3, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/x5curfadsolebipl5iyh'),
+(2, 'Dia', 'Supermercado', 5, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/ly8eyexldlgqntcb0uyt'),
+(3, 'Burger King', 'Americana', 3, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/ie0obr3ckjemazfybypz'),
+(4, 'Telepizza', 'Pizza', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/redheyfvhbgvedsdbmkb'),
+(5, 'Starbucks', 'Desayuno', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rol78tegsyjdf3yjcjma'),
+(6, 'Dunkin', 'Desayuno', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/wap0jg2pkxnl5v0nj75b'),
+(7, 'King Doner Kebab', 'Árabe', 3, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/cqpw59aux0wmftouz1dc'),
+(8, 'Taco Bell', 'Mexicana', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rxbvf1ntbypud38z0dmy');
 
 --
 -- Índices para tablas volcadas

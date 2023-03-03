@@ -60,6 +60,32 @@ body::-webkit-scrollbar-thumb {
     background-color: #00846b;
 }
 
+.categoryInput {
+    height: 44px;
+    background-color: #00b997;
+    border-radius: 7px;
+    color:white;
+    padding-left: 5px;
+    border: 1px solid black;
+    position: relative;
+    font-weight: bold;
+}
+
+.starInput {
+    height: 44px;
+    background-color: #00c4a0;
+    color: white;
+    border-radius: 24px;
+    border: none;
+    position: relative;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.starInput:hover {
+    background-color: #00a082;
+}
+
 .restaurant-app > .restaurants-list {
     overflow-x: auto;
     overflow-y: hidden;
@@ -73,6 +99,14 @@ body::-webkit-scrollbar-thumb {
 .restaurant-app > .restaurants-list::-webkit-scrollbar-thumb {
     background: #ff9d00;
     border-radius: 15px;
+}
+
+.img-establecimientos {
+    width: 32px;
+    aspect-ratio: auto 24 / 24;
+    height: 32px;
+    margin-top: 4px;
+    margin-right: 8px;
 }
 
 .restaurant-list {

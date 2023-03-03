@@ -2,31 +2,30 @@ import React from "react";
 
 const RestaurantFilter = (props) => {
   return (
-    <div className="form-control p-4 pb-3 mb-3">
+    <div className="p-4 pb-0 mb-3">
       <h1 className="mb-4">Filtros</h1>
-      <div className="pb-4 d-flex align-items-center justify-content-center">
-        <label className="me-3">
+      <div className="pb-4 d-grid">
+        <label>
           <h4>Categoria</h4>
         </label>
-        <select className="form-control">
-          <option>- Seleccione una categoria -</option>
+        <select className="categoryInput">
+          <option></option>
           <option>Americana</option>
           <option>Supermercado</option>
           <option>Pizza</option>
           <option>Desayuno</option>
           <option>Árabe</option>
         </select>
-        <label className="ms-3 me-3">
+        <label className="mt-3">
           <h4>Estrellas</h4>
         </label>
-        <select className="form-control">
-          <option>- Seleccione cuantas estrellas -</option>
-          <option>⭐</option>
-          <option>⭐⭐</option>
-          <option>⭐⭐⭐</option>
-          <option>⭐⭐⭐⭐</option>
-          <option>⭐⭐⭐⭐⭐</option>
-        </select>
+        <div className="">
+          <input className="me-2 starInput" type="button" value="⭐"></input>
+          <input className="me-2 starInput" type="button" value="⭐⭐"></input>
+          <input className="me-2 starInput" type="button" value="⭐⭐⭐"></input>
+          <input className="me-2 starInput" type="button" value="⭐⭐⭐⭐"></input>
+          <input className="me-2 starInput" type="button" value="⭐⭐⭐⭐⭐"></input>
+        </div>
       </div>
     </div>
   );
