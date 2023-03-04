@@ -37,7 +37,7 @@ const App = () => {
   }
 
   const addFavouriteMovie = (movie) => {
-    const addFavourite = true;
+    var addFavourite = true;
     favourites.forEach(favourite => {
       if (favourite.imdbID === movie.imdbID) {
         addFavourite = false;
