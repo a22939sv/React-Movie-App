@@ -59,6 +59,50 @@ const restaurantController = {
                 status: error
             })
         }
+    },
+    getAllRestaurantCategory: async (req, res) => {
+        try {
+            const sql = "select distinct category from restaurant order by category"
+            const [rows, fields] = await pool.query(sql)
+            res.json({
+                data: rows
+            })
+        } catch (error) {
+            console.log(error)
+            res.json({
+                status: error
+            })
+        }
+    },
+    getByCategoryRestaurant: async (req, res) => {
+        try {
+            const { category } = req.params
+            const sql = "select * from restaurant where category = ?"
+            const [rows, fields] = await pool.query(sql, [category])
+            res.json({
+                data: rows
+            })
+        } catch (error) {
+            console.log(error)
+            res.json({
+                status: error
+            })
+        }
+    },
+    getByStarRestaurant: async (req, res) => {
+        try {
+            const { star } = req.params
+            const sql = "select * from restaurant where star = ?"
+            const [rows, fields] = await pool.query(sql, [star])
+            res.json({
+                data: rows
+            })
+        } catch (error) {
+            console.log(error)
+            res.json({
+                status: error
+            })
+        }
     }
 }
 

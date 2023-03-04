@@ -14,6 +14,7 @@ const App = () => {
   const [restaurants, setRestaurants] = useState([{}]);
   const [restaurantsScore, setRestaurantsScore] = useState([{}]);
   const [searchValue, setSearchValue] = useState("");
+  const [category, setCategory] = useState([{}]);
 
   const getRestaurantsRequest = async (searchValue) => {
     var url = "";
@@ -44,12 +45,62 @@ const App = () => {
     }
   };
 
+  const getCategory = async () => {
+    const url = `/api/v1/restaurant/category`;
+
+    const response = await fetch(url);
+
+    const responseJson = await response.json();
+
+    if (responseJson.data) {
+      setCategory(responseJson.data);
+    }
+  }
+
+  const setRestaurantCategory = async (category) => {
+    var url;
+    if (category !== "") {
+      url = `/api/v1/restaurant/category/${category}`;
+    } else {
+      url = `/api/v1/restaurant`;
+    }
+
+    const response = await fetch(url);
+
+    const responseJson = await response.json();
+
+    if (responseJson.data) {
+      setRestaurants(responseJson.data);
+    }
+  }
+
+  const setRestaurantStar = async (star) => {
+    var url;
+    if (star !== "") {
+      url = `/api/v1/restaurant/star/${star}`;
+    } else {
+      url = `/api/v1/restaurant`;
+    }
+
+    const response = await fetch(url);
+
+    const responseJson = await response.json();
+
+    if (responseJson.data) {
+      setRestaurants(responseJson.data);
+    }
+  }
+
   useEffect(() => {
     getRestaurantsRequest(searchValue);
   }, [searchValue]);
 
   useEffect(() => {
     getRestaurantsScoreRequest();
+  }, []);
+
+  useEffect(() => {
+    getCategory();
   }, []);
 
   return (
@@ -60,7 +111,16 @@ const App = () => {
       <div className="row ms-5 me-5">
         <div className="row ms-1 mt-2 filter">
           <div className="row mt-2 me-3">
-            <RestaurantFilter />
+            <RestaurantFilter 
+              category={category} 
+              setRestaurantCategory={setRestaurantCategory}
+              setRestaurantStar={setRestaurantStar}
+              removeFilter={() => {
+                document.getElementById("searchInput").value = "";
+                document.getElementById("categoryInput").value = "";
+                getRestaurantsRequest("");
+              }}
+            />
           </div>
         </div>
         <div className="row mt-2 me-3">

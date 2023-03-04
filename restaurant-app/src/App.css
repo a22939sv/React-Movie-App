@@ -86,6 +86,16 @@ body::-webkit-scrollbar-thumb {
     background-color: #00a082;
 }
 
+.closeButton {
+    background: none;
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    float: right;
+    transform: translateY(-180%);
+}
+
 .restaurant-app > .restaurants-list {
     overflow-x: auto;
     overflow-y: hidden;
