@@ -49,7 +49,9 @@ INSERT INTO `restaurant` (`id`, `name`, `category`, `star`, `img`) VALUES
 (5, 'Starbucks', 'Desayuno', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rol78tegsyjdf3yjcjma'),
 (6, 'Dunkin', 'Desayuno', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/wap0jg2pkxnl5v0nj75b'),
 (7, 'King Doner Kebab', 'Árabe', 3, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/cqpw59aux0wmftouz1dc'),
-(8, 'Taco Bell', 'Mexicana', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rxbvf1ntbypud38z0dmy');
+(8, 'Taco Bell', 'Mexicana', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/rxbvf1ntbypud38z0dmy'),
+(9, 'Papa Johns', 'Pizza', 4, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/gvzgrpc77bgmmqd1lbcf'),
+(10, 'Goiko', 'Americana', 3, 'https://res.cloudinary.com/glovoapp/w_450,h_250,c_fill,f_auto,q_30/Stores/gdifyfyb3yhp8akmf5pv');
 
 --
 -- Índices para tablas volcadas
